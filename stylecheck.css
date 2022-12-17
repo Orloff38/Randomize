@@ -6,20 +6,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto:wght@300;400;700&display=swap');
 
 body{
-
+  
     background-image: url(wallpaper.jpg);
-    background-size: cover;
+    background-size:cover;
     background-position: center;
-    background-repeat: no-repeat;
+    outline: none;
 
 
+}
+
+.all{
+    height: 100vh;
 }
 
 .container{
     font-family: 'Paytone One', sans-serif;
     min-height: 400px;
-    max-height: 600px;
-    max-width: 400px;
+    max-width: 450px;
+    min-width: 320px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -34,6 +38,7 @@ body{
 }
 
 .val{
+    max-width: 320px;
     font-weight: 300;
     text-transform: uppercase;
     position: relative;
@@ -48,7 +53,7 @@ input[type=checkbox]{
 }
 
 .number__val{
- 
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +63,7 @@ input[type=checkbox]{
 .number__val label{
 display: flex;
 justify-content: space-between;
-flex-basis:  300px;
+flex-basis:  100%;
 }
 
 
@@ -122,7 +127,7 @@ font-weight: 700;
 }
 
 .number{
-
+    width: calc(100% - 20px);
     margin-left: 10px;
     margin-right: 10px;
     height: 30px;
@@ -136,15 +141,15 @@ font-weight: 700;
     font-size: 22px;
     padding-bottom: 5px;
 
+
 }
 
 .buttons{
     font-family: 'Paytone One', sans-serif;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 0 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+margin-top: 30px;
     font-weight: 400;
 
 }
@@ -208,6 +213,14 @@ input:checked ~ .switch::before{
 
 }
 
+#generate:hover, #copy:hover{
+    background-color: #6780db;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+
+}
 
 
 #copy{
@@ -225,3 +238,29 @@ input:checked ~ .switch::before{
     letter-spacing: 2px;
 }
 
+@media (max-width: 450px){
+    body{
+        background-image: none;
+    }
+.all{
+    width: 100%;
+    min-height: 500px;
+
+}
+    .container{
+
+height: 100vh;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #ffffff;
+color: #035b98;           /* 2 */                   /* 3 */
+box-shadow: 5px -5px 5px #121313;
+}
+.inner{
+    position: relative;
+    top:20%;
+}
+
+}
